@@ -40,7 +40,7 @@ function App() {
         const bankContract = new ethers.Contract(contractAddress, contractABI, signer);
   
         let bankName = await bankContract.bankName();
-        bankName = utils.parseBytes32String(bankName);
+        // bankName = utils.parseBytes32String(bankName);
         setCurrentBankName(bankName.toString());
       } else {
         console.log("Ethereum object not found, install Metamask.");
